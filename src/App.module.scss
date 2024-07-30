@@ -1,0 +1,155 @@
+.wrapper {
+    width: 730px;
+}
+
+//Header =======
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+//Header - Content
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+.header__content-title {
+    font-size: 26px;
+    color: var(--titleColor);
+}
+.header__content-mode {
+    display: flex;
+    margin-bottom: 12px;
+    gap: 19px;
+    color: var(--titleColor);
+    cursor: pointer;
+}
+.mode-title {
+    font-size: 15.5px;
+}
+
+//Container (profile) ================
+.container {
+    display: flex;
+    gap: 39px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px -10px hsla(212, 100%, 50%, 20%);
+    padding: 52px 47px 50px 50px;
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    flex-grow: 1;
+}
+
+//Name
+.detail__name {
+    display: flex;
+    justify-content: space-between;
+}
+.fullName {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--titleColor);
+}
+.createAt {
+    color: var(--contentColor);
+}
+
+.login {
+    color: hsl(212, 100%, 50%);
+}
+//Bio
+.detail__bio {
+    font-size: 15.5px;
+    color: hsla(0, 0%, 50%, 80%);
+}
+
+//summary
+.detail__summary {
+    display: flex;
+    gap: 81px;
+    background-color: hsl(227, 100%, 98%);
+    border-radius: 8px;
+    padding: 17px 0px 18px 32px;
+}
+.summary__item-title {
+    font-size: 13px;
+    margin-bottom: 11px;
+    color: var(--contentColor);
+}
+.summary__item-quantity {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--titleColor);
+}
+
+//contact
+.detail__contact {
+    display: grid;
+    grid-template-columns: 231px 231px;
+    column-gap: 12px;
+    row-gap: 17px;
+    margin-bottom: 8px;
+    color: var(--contentColor);
+}
+.contact__item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    &:has(p.actives) {
+        font-size: 100px;
+    }
+}
+
+.contact__item-title {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+        overflow: visible;
+    }
+}
+
+//Max content in line ==============
+.detail__bio,
+.login,
+.fullName,
+.createAt,
+.summary__item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+        overflow: visible;
+    }
+}
+
+.detail__bio,
+.login {
+    max-width: var(--maxContent);
+}
+.fullName,
+.createAt {
+    max-width: calc(var(--maxContent) / 2 - 20px);
+}
+
+.summary__item {
+    max-width: 75px;
+}
